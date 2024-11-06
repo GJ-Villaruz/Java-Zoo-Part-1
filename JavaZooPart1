@@ -1,0 +1,167 @@
+public class JavaZoo {
+    public static void main(String[] args) {
+        // Create instances
+        ZooAnimal myFirstAnimal = new ZooAnimal();
+        Cage myFirstCage = new Cage();
+        ZooKeeper myFirstZooKeeper = new ZooKeeper();
+
+        // Set attributes for ZooAnimal
+        myFirstAnimal.setName("Zee");
+        myFirstAnimal.setType("Monkey");
+        myFirstAnimal.setAge(2);
+        myFirstAnimal.setHungry(true);
+
+        // Set attributes for Cage
+        myFirstCage.setLength(10);
+        myFirstCage.setWidth(12);
+        myFirstCage.setClean(true);
+        myFirstCage.setCovered(false);
+        myFirstCage.setAnimal(myFirstAnimal); // Associate animal with the cage
+
+        // Set attributes for ZooKeeper
+        myFirstZooKeeper.setName("John Doe");
+        myFirstZooKeeper.setTitle("Janitor");
+        myFirstZooKeeper.setPayRate(5000.0);
+        myFirstZooKeeper.setDegree(true);
+
+        // Display output
+        System.out.println("Java Zoo 'n' Park\n");
+
+        System.out.println("Animal Name: " + myFirstAnimal.getName());
+        System.out.println("Animal Type: " + myFirstAnimal.getType());
+        System.out.println("Animal Age: " + myFirstAnimal.getAge());
+        System.out.println("Is Animal Hungry? " + myFirstAnimal.isHungry() + "\n");
+
+        System.out.println("Cage Length: " + myFirstCage.getLength());
+        System.out.println("Cage Width: " + myFirstCage.getWidth());
+        System.out.println("Is Cage Clean? " + myFirstCage.isClean());
+        System.out.println("Is Cage Covered? " + myFirstCage.isCovered() + "\n");
+
+        System.out.println("ZooKeeper Name: " + myFirstZooKeeper.getName());
+        System.out.println("ZooKeeper Title: " + myFirstZooKeeper.getTitle());
+        System.out.println("ZooKeeper PayRate: " + myFirstZooKeeper.getPayRate());
+        System.out.println("Has a Degree? " + myFirstZooKeeper.hasDegree());
+    }
+}
+
+class ZooAnimal {
+    private String name;
+    private String type;
+    private int age;
+    private boolean hungry;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setHungry(boolean hungry) {
+        this.hungry = hungry;
+    }
+
+    public boolean isHungry() {
+        return hungry;
+    }
+}
+
+class Cage {
+    private int length;
+    private int width;
+    private boolean clean;
+    private boolean covered;
+    private ZooAnimal animal;
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setClean(boolean clean) {
+        this.clean = clean;
+    }
+
+    public boolean isClean() {
+        return clean;
+    }
+
+    public void setCovered(boolean covered) {
+        this.covered = covered;
+    }
+
+    public boolean isCovered() {
+        return covered;
+    }
+
+    public void setAnimal(ZooAnimal animal) {
+        this.animal = animal;
+    }
+}
+
+class ZooKeeper {
+    private String name;
+    private String title;
+    private double payRate;
+    private boolean degree;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setPayRate(double payRate) {
+        this.payRate = payRate;
+    }
+
+    public double getPayRate() {
+        return payRate;
+    }
+
+    public void setDegree(boolean degree) {
+        this.degree = degree;
+    }
+
+    public boolean hasDegree() {
+        return degree;
+    }
+}
